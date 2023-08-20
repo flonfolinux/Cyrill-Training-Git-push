@@ -1,0 +1,2078 @@
+DATATYPE ALARM
+        BOOL        ENABLEIN;
+        REAL        IN;
+        REAL        HHLIMIT;
+        REAL        HLIMIT;
+        REAL        LLIMIT;
+        REAL        LLLIMIT;
+        REAL        DEADBAND;
+        REAL        ROCPOSLIMIT;
+        REAL        ROCNEGLIMIT;
+        REAL        ROCPERIOD;
+        BOOL        ENABLEOUT;
+        BOOL        HHALARM;
+        BOOL        HALARM;
+        BOOL        LALARM;
+        BOOL        LLALARM;
+        BOOL        ROCPOSALARM;
+        BOOL        ROCNEGALARM;
+        REAL        ROC;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        DEADBANDINV;
+        BOOL        ROCPOSLIMITINV;
+        BOOL        ROCNEGLIMITINV;
+        BOOL        ROCPERIODINV;
+END_DATATYPE
+
+DATATYPE AXIS_CONSUMED
+        DINT        AXISFAULT;
+        BOOL        PHYSICALAXISFAULT;
+        BOOL        MODULEFAULT;
+        BOOL        CONFIGFAULT;
+        DINT        AXISSTATUS;
+        BOOL        SERVOACTIONSTATUS;
+        BOOL        DRIVEENABLESTATUS;
+        BOOL        SHUTDOWNSTATUS;
+        BOOL        CONFIGUPDATEINPROCESS;
+        DINT        MOTIONSTATUS;
+        BOOL        ACCELSTATUS;
+        BOOL        DECELSTATUS;
+        BOOL        MOVESTATUS;
+        BOOL        JOGSTATUS;
+        BOOL        GEARINGSTATUS;
+        BOOL        HOMINGSTATUS;
+        BOOL        STOPPINGSTATUS;
+        BOOL        AXISHOMEDSTATUS;
+        BOOL        POSITIONCAMSTATUS;
+        BOOL        TIMECAMSTATUS;
+        BOOL        POSITIONCAMPENDINGSTATUS;
+        BOOL        TIMECAMPENDINGSTATUS;
+        BOOL        GEARINGLOCKSTATUS;
+        BOOL        POSITIONCAMLOCKSTATUS;
+        BOOL        MASTEROFFSETMOVESTATUS;
+        BOOL        COORDINATEDMOTIONSTATUS;
+        DINT        AXISEVENT;
+        BOOL        WATCHEVENTARMEDSTATUS;
+        BOOL        WATCHEVENTSTATUS;
+        BOOL        REGEVENT1ARMEDSTATUS;
+        BOOL        REGEVENT1STATUS;
+        BOOL        REGEVENT2ARMEDSTATUS;
+        BOOL        REGEVENT2STATUS;
+        BOOL        HOMEEVENTARMEDSTATUS;
+        BOOL        HOMEEVENTSTATUS;
+        DINT        OUTPUTCAMSTATUS;
+        DINT        OUTPUTCAMPENDINGSTATUS;
+        DINT        OUTPUTCAMLOCKSTATUS;
+        DINT        OUTPUTCAMTRANSITIONSTATUS;
+        REAL        ACTUALPOSITION;
+        REAL        STROBEACTUALPOSITION;
+        REAL        STARTACTUALPOSITION;
+        REAL        AVERAGEVELOCITY;
+        REAL        ACTUALVELOCITY;
+        REAL        ACTUALACCELERATION;
+        REAL        WATCHPOSITION;
+        REAL        REGISTRATION1POSITION;
+        REAL        REGISTRATION2POSITION;
+        DINT        REGISTRATION1TIME;
+        DINT        REGISTRATION2TIME;
+        DINT        INTERPOLATIONTIME;
+        REAL        INTERPOLATEDACTUALPOSITION;
+        REAL        MASTEROFFSET;
+        REAL        STROBEMASTEROFFSET;
+        REAL        STARTMASTEROFFSET;
+        REAL        COMMANDPOSITION;
+        REAL        STROBECOMMANDPOSITION;
+        REAL        STARTCOMMANDPOSITION;
+        REAL        COMMANDVELOCITY;
+        REAL        COMMANDACCELERATION;
+        REAL        INTERPOLATEDCOMMANDPOSITION;
+        DINT        MODULEFAULTS;
+        BOOL        CONTROLSYNCFAULT;
+END_DATATYPE
+
+DATATYPE AXIS_GENERIC
+        DINT        AXISFAULT;
+        BOOL        PHYSICALAXISFAULT;
+        BOOL        MODULEFAULT;
+        BOOL        CONFIGFAULT;
+        DINT        AXISSTATUS;
+        BOOL        SERVOACTIONSTATUS;
+        BOOL        DRIVEENABLESTATUS;
+        BOOL        SHUTDOWNSTATUS;
+        BOOL        CONFIGUPDATEINPROCESS;
+        DINT        MOTIONSTATUS;
+        BOOL        ACCELSTATUS;
+        BOOL        DECELSTATUS;
+        BOOL        MOVESTATUS;
+        BOOL        JOGSTATUS;
+        BOOL        GEARINGSTATUS;
+        BOOL        HOMINGSTATUS;
+        BOOL        STOPPINGSTATUS;
+        BOOL        AXISHOMEDSTATUS;
+        BOOL        POSITIONCAMSTATUS;
+        BOOL        TIMECAMSTATUS;
+        BOOL        POSITIONCAMPENDINGSTATUS;
+        BOOL        TIMECAMPENDINGSTATUS;
+        BOOL        GEARINGLOCKSTATUS;
+        BOOL        POSITIONCAMLOCKSTATUS;
+        BOOL        MASTEROFFSETMOVESTATUS;
+        BOOL        COORDINATEDMOTIONSTATUS;
+        DINT        AXISEVENT;
+        BOOL        WATCHEVENTARMEDSTATUS;
+        BOOL        WATCHEVENTSTATUS;
+        BOOL        REGEVENT1ARMEDSTATUS;
+        BOOL        REGEVENT1STATUS;
+        BOOL        REGEVENT2ARMEDSTATUS;
+        BOOL        REGEVENT2STATUS;
+        BOOL        HOMEEVENTARMEDSTATUS;
+        BOOL        HOMEEVENTSTATUS;
+        DINT        OUTPUTCAMSTATUS;
+        DINT        OUTPUTCAMPENDINGSTATUS;
+        DINT        OUTPUTCAMLOCKSTATUS;
+        DINT        OUTPUTCAMTRANSITIONSTATUS;
+        REAL        ACTUALPOSITION;
+        REAL        STROBEACTUALPOSITION;
+        REAL        STARTACTUALPOSITION;
+        REAL        AVERAGEVELOCITY;
+        REAL        ACTUALVELOCITY;
+        REAL        ACTUALACCELERATION;
+        REAL        WATCHPOSITION;
+        REAL        REGISTRATION1POSITION;
+        REAL        REGISTRATION2POSITION;
+        DINT        REGISTRATION1TIME;
+        DINT        REGISTRATION2TIME;
+        DINT        INTERPOLATIONTIME;
+        REAL        INTERPOLATEDACTUALPOSITION;
+        REAL        MASTEROFFSET;
+        REAL        STROBEMASTEROFFSET;
+        REAL        STARTMASTEROFFSET;
+        REAL        COMMANDPOSITION;
+        REAL        STROBECOMMANDPOSITION;
+        REAL        STARTCOMMANDPOSITION;
+        REAL        COMMANDVELOCITY;
+        REAL        COMMANDACCELERATION;
+        REAL        INTERPOLATEDCOMMANDPOSITION;
+END_DATATYPE
+
+DATATYPE AXIS_SERVO
+        DINT        AXISFAULT;
+        BOOL        PHYSICALAXISFAULT;
+        BOOL        MODULEFAULT;
+        BOOL        CONFIGFAULT;
+        DINT        AXISSTATUS;
+        BOOL        SERVOACTIONSTATUS;
+        BOOL        DRIVEENABLESTATUS;
+        BOOL        SHUTDOWNSTATUS;
+        BOOL        CONFIGUPDATEINPROCESS;
+        DINT        MOTIONSTATUS;
+        BOOL        ACCELSTATUS;
+        BOOL        DECELSTATUS;
+        BOOL        MOVESTATUS;
+        BOOL        JOGSTATUS;
+        BOOL        GEARINGSTATUS;
+        BOOL        HOMINGSTATUS;
+        BOOL        STOPPINGSTATUS;
+        BOOL        AXISHOMEDSTATUS;
+        BOOL        POSITIONCAMSTATUS;
+        BOOL        TIMECAMSTATUS;
+        BOOL        POSITIONCAMPENDINGSTATUS;
+        BOOL        TIMECAMPENDINGSTATUS;
+        BOOL        GEARINGLOCKSTATUS;
+        BOOL        POSITIONCAMLOCKSTATUS;
+        BOOL        MASTEROFFSETMOVESTATUS;
+        BOOL        COORDINATEDMOTIONSTATUS;
+        DINT        AXISEVENT;
+        BOOL        WATCHEVENTARMEDSTATUS;
+        BOOL        WATCHEVENTSTATUS;
+        BOOL        REGEVENT1ARMEDSTATUS;
+        BOOL        REGEVENT1STATUS;
+        BOOL        REGEVENT2ARMEDSTATUS;
+        BOOL        REGEVENT2STATUS;
+        BOOL        HOMEEVENTARMEDSTATUS;
+        BOOL        HOMEEVENTSTATUS;
+        DINT        OUTPUTCAMSTATUS;
+        DINT        OUTPUTCAMPENDINGSTATUS;
+        DINT        OUTPUTCAMLOCKSTATUS;
+        DINT        OUTPUTCAMTRANSITIONSTATUS;
+        REAL        ACTUALPOSITION;
+        REAL        STROBEACTUALPOSITION;
+        REAL        STARTACTUALPOSITION;
+        REAL        AVERAGEVELOCITY;
+        REAL        ACTUALVELOCITY;
+        REAL        ACTUALACCELERATION;
+        REAL        WATCHPOSITION;
+        REAL        REGISTRATION1POSITION;
+        REAL        REGISTRATION2POSITION;
+        DINT        REGISTRATION1TIME;
+        DINT        REGISTRATION2TIME;
+        DINT        INTERPOLATIONTIME;
+        REAL        INTERPOLATEDACTUALPOSITION;
+        REAL        MASTEROFFSET;
+        REAL        STROBEMASTEROFFSET;
+        REAL        STARTMASTEROFFSET;
+        REAL        COMMANDPOSITION;
+        REAL        STROBECOMMANDPOSITION;
+        REAL        STARTCOMMANDPOSITION;
+        REAL        COMMANDVELOCITY;
+        REAL        COMMANDACCELERATION;
+        REAL        INTERPOLATEDCOMMANDPOSITION;
+        DINT        SERVOSTATUS;
+        BOOL        PROCESSSTATUS;
+        BOOL        OUTPUTLIMITSTATUS;
+        BOOL        POSITIONLOCKSTATUS;
+        BOOL        HOMEINPUTSTATUS;
+        BOOL        REG1INPUTSTATUS;
+        BOOL        REG2INPUTSTATUS;
+        BOOL        DRIVEFAULTINPUTSTATUS;
+        DINT        SERVOFAULT;
+        BOOL        POSSOFTOVERTRAVELFAULT;
+        BOOL        NEGSOFTOVERTRAVELFAULT;
+        BOOL        FEEDBACKFAULT;
+        BOOL        FEEDBACKNOISEFAULT;
+        BOOL        POSITIONERRORFAULT;
+        BOOL        DRIVEFAULT;
+        DINT        MODULEFAULTS;
+        BOOL        CONTROLSYNCFAULT;
+        BOOL        MODULESYNCFAULT;
+        BOOL        TIMEREVENTFAULT;
+        BOOL        MODULEHARDWAREFAULT;
+        BOOL        INTERMODULESYNCFAULT;
+        INT        ATTRIBUTEERRORCODE;
+        INT        ATTRIBUTEERRORID;
+        REAL        POSITIONCOMMAND;
+        REAL        POSITIONFEEDBACK;
+        REAL        AUXPOSITIONFEEDBACK;
+        REAL        POSITIONERROR;
+        REAL        POSITIONINTEGRATORERROR;
+        REAL        VELOCITYCOMMAND;
+        REAL        VELOCITYFEEDBACK;
+        REAL        VELOCITYERROR;
+        REAL        VELOCITYINTEGRATORERROR;
+        REAL        ACCELERATIONCOMMAND;
+        REAL        ACCELERATIONFEEDBACK;
+        REAL        SERVOOUTPUTLEVEL;
+        REAL        MARKERDISTANCE;
+        REAL        VELOCITYOFFSET;
+        REAL        TORQUEOFFSET;
+END_DATATYPE
+
+DATATYPE AXIS_SERVO_DRIVE
+        DINT        AXISFAULT;
+        BOOL        PHYSICALAXISFAULT;
+        BOOL        MODULEFAULT;
+        BOOL        CONFIGFAULT;
+        DINT        AXISSTATUS;
+        BOOL        SERVOACTIONSTATUS;
+        BOOL        DRIVEENABLESTATUS;
+        BOOL        SHUTDOWNSTATUS;
+        BOOL        CONFIGUPDATEINPROCESS;
+        DINT        MOTIONSTATUS;
+        BOOL        ACCELSTATUS;
+        BOOL        DECELSTATUS;
+        BOOL        MOVESTATUS;
+        BOOL        JOGSTATUS;
+        BOOL        GEARINGSTATUS;
+        BOOL        HOMINGSTATUS;
+        BOOL        STOPPINGSTATUS;
+        BOOL        AXISHOMEDSTATUS;
+        BOOL        POSITIONCAMSTATUS;
+        BOOL        TIMECAMSTATUS;
+        BOOL        POSITIONCAMPENDINGSTATUS;
+        BOOL        TIMECAMPENDINGSTATUS;
+        BOOL        GEARINGLOCKSTATUS;
+        BOOL        POSITIONCAMLOCKSTATUS;
+        BOOL        MASTEROFFSETMOVESTATUS;
+        BOOL        COORDINATEDMOTIONSTATUS;
+        DINT        AXISEVENT;
+        BOOL        WATCHEVENTARMEDSTATUS;
+        BOOL        WATCHEVENTSTATUS;
+        BOOL        REGEVENT1ARMEDSTATUS;
+        BOOL        REGEVENT1STATUS;
+        BOOL        REGEVENT2ARMEDSTATUS;
+        BOOL        REGEVENT2STATUS;
+        BOOL        HOMEEVENTARMEDSTATUS;
+        BOOL        HOMEEVENTSTATUS;
+        DINT        OUTPUTCAMSTATUS;
+        DINT        OUTPUTCAMPENDINGSTATUS;
+        DINT        OUTPUTCAMLOCKSTATUS;
+        DINT        OUTPUTCAMTRANSITIONSTATUS;
+        REAL        ACTUALPOSITION;
+        REAL        STROBEACTUALPOSITION;
+        REAL        STARTACTUALPOSITION;
+        REAL        AVERAGEVELOCITY;
+        REAL        ACTUALVELOCITY;
+        REAL        ACTUALACCELERATION;
+        REAL        WATCHPOSITION;
+        REAL        REGISTRATION1POSITION;
+        REAL        REGISTRATION2POSITION;
+        DINT        REGISTRATION1TIME;
+        DINT        REGISTRATION2TIME;
+        DINT        INTERPOLATIONTIME;
+        REAL        INTERPOLATEDACTUALPOSITION;
+        REAL        MASTEROFFSET;
+        REAL        STROBEMASTEROFFSET;
+        REAL        STARTMASTEROFFSET;
+        REAL        COMMANDPOSITION;
+        REAL        STROBECOMMANDPOSITION;
+        REAL        STARTCOMMANDPOSITION;
+        REAL        COMMANDVELOCITY;
+        REAL        COMMANDACCELERATION;
+        REAL        INTERPOLATEDCOMMANDPOSITION;
+        DINT        MODULEFAULTS;
+        BOOL        CONTROLSYNCFAULT;
+        BOOL        MODULESYNCFAULT;
+        BOOL        TIMEREVENTFAULT;
+        BOOL        MODULEHARDWAREFAULT;
+        BOOL        SERCOSRINGFAULT;
+        INT        ATTRIBUTEERRORCODE;
+        INT        ATTRIBUTEERRORID;
+        REAL        POSITIONCOMMAND;
+        REAL        POSITIONFEEDBACK;
+        REAL        AUXPOSITIONFEEDBACK;
+        REAL        POSITIONERROR;
+        REAL        POSITIONINTEGRATORERROR;
+        REAL        VELOCITYCOMMAND;
+        REAL        VELOCITYFEEDBACK;
+        REAL        VELOCITYERROR;
+        REAL        VELOCITYINTEGRATORERROR;
+        REAL        ACCELERATIONCOMMAND;
+        REAL        ACCELERATIONFEEDBACK;
+        REAL        MARKERDISTANCE;
+        REAL        VELOCITYOFFSET;
+        REAL        TORQUEOFFSET;
+        REAL        TORQUECOMMAND;
+        REAL        TORQUEFEEDBACK;
+        REAL        POSDYNAMICTORQUELIMIT;
+        REAL        NEGDYNAMICTORQUELIMIT;
+        REAL        MOTORCAPACITY;
+        REAL        DRIVECAPACITY;
+        REAL        POWERCAPACITY;
+        REAL        BUSREGULATORCAPACITY;
+        REAL        MOTORELECTRICALANGLE;
+        DINT        TORQUELIMITSOURCE;
+        DINT        DCBUSVOLTAGE;
+        DINT        DRIVESTATUS;
+        BOOL        PROCESSSTATUS;
+        BOOL        HOMEINPUTSTATUS;
+        BOOL        REG1INPUTSTATUS;
+        BOOL        REG2INPUTSTATUS;
+        BOOL        POSOVERTRAVELINPUTSTATUS;
+        BOOL        NEGOVERTRAVELINPUTSTATUS;
+        BOOL        ENABLEINPUTSTATUS;
+        BOOL        ACCELLIMITSTATUS;
+        BOOL        ABSOLUTEREFERENCESTATUS;
+        BOOL        VELOCITYLOCKSTATUS;
+        BOOL        VELOCITYSTANDSTILLSTATUS;
+        BOOL        VELOCITYTHRESHOLDSTATUS;
+        BOOL        TORQUETHRESHOLDSTATUS;
+        BOOL        TORQUELIMITSTATUS;
+        BOOL        VELOCITYLIMITSTATUS;
+        BOOL        POSITIONLOCKSTATUS;
+        BOOL        POWERLIMITSTATUS;
+        BOOL        LOWVELOCITYTHRESHOLDSTATUS;
+        BOOL        HIGHVELOCITYTHRESHOLDSTATUS;
+        DINT        DRIVEFAULT;
+        BOOL        POSSOFTOVERTRAVELFAULT;
+        BOOL        NEGSOFTOVERTRAVELFAULT;
+        BOOL        POSHARDOVERTRAVELFAULT;
+        BOOL        NEGHARDOVERTRAVELFAULT;
+        BOOL        MOTFEEDBACKFAULT;
+        BOOL        MOTFEEDBACKNOISEFAULT;
+        BOOL        AUXFEEDBACKFAULT;
+        BOOL        AUXFEEDBACKNOISEFAULT;
+        BOOL        DRIVEENABLEINPUTFAULT;
+        BOOL        GROUNDSHORTFAULT;
+        BOOL        DRIVEHARDFAULT;
+        BOOL        OVERSPEEDFAULT;
+        BOOL        OVERLOADFAULT;
+        BOOL        DRIVEOVERTEMPFAULT;
+        BOOL        MOTOROVERTEMPFAULT;
+        BOOL        DRIVECOOLINGFAULT;
+        BOOL        DRIVECONTROLVOLTAGEFAULT;
+        BOOL        FEEDBACKFAULT;
+        BOOL        COMMUTATIONFAULT;
+        BOOL        DRIVEOVERCURRENTFAULT;
+        BOOL        DRIVEOVERVOLTAGEFAULT;
+        BOOL        DRIVEUNDERVOLTAGEFAULT;
+        BOOL        POWERPHASELOSSFAULT;
+        BOOL        POSITIONERRORFAULT;
+        BOOL        SERCOSFAULT;
+        INT        SERCOSERRORCODE;
+END_DATATYPE
+
+DATATYPE AXIS_VIRTUAL
+        DINT        AXISFAULT;
+        BOOL        PHYSICALAXISFAULT;
+        BOOL        MODULEFAULT;
+        BOOL        CONFIGFAULT;
+        DINT        AXISSTATUS;
+        BOOL        SERVOACTIONSTATUS;
+        BOOL        DRIVEENABLESTATUS;
+        BOOL        SHUTDOWNSTATUS;
+        BOOL        CONFIGUPDATEINPROCESS;
+        DINT        MOTIONSTATUS;
+        BOOL        ACCELSTATUS;
+        BOOL        DECELSTATUS;
+        BOOL        MOVESTATUS;
+        BOOL        JOGSTATUS;
+        BOOL        GEARINGSTATUS;
+        BOOL        HOMINGSTATUS;
+        BOOL        STOPPINGSTATUS;
+        BOOL        AXISHOMEDSTATUS;
+        BOOL        POSITIONCAMSTATUS;
+        BOOL        TIMECAMSTATUS;
+        BOOL        POSITIONCAMPENDINGSTATUS;
+        BOOL        TIMECAMPENDINGSTATUS;
+        BOOL        GEARINGLOCKSTATUS;
+        BOOL        POSITIONCAMLOCKSTATUS;
+        BOOL        MASTEROFFSETMOVESTATUS;
+        BOOL        COORDINATEDMOTIONSTATUS;
+        DINT        AXISEVENT;
+        BOOL        WATCHEVENTARMEDSTATUS;
+        BOOL        WATCHEVENTSTATUS;
+        BOOL        REGEVENT1ARMEDSTATUS;
+        BOOL        REGEVENT1STATUS;
+        BOOL        REGEVENT2ARMEDSTATUS;
+        BOOL        REGEVENT2STATUS;
+        BOOL        HOMEEVENTARMEDSTATUS;
+        BOOL        HOMEEVENTSTATUS;
+        DINT        OUTPUTCAMSTATUS;
+        DINT        OUTPUTCAMPENDINGSTATUS;
+        DINT        OUTPUTCAMLOCKSTATUS;
+        DINT        OUTPUTCAMTRANSITIONSTATUS;
+        REAL        ACTUALPOSITION;
+        REAL        STROBEACTUALPOSITION;
+        REAL        STARTACTUALPOSITION;
+        REAL        AVERAGEVELOCITY;
+        REAL        ACTUALVELOCITY;
+        REAL        ACTUALACCELERATION;
+        REAL        WATCHPOSITION;
+        REAL        REGISTRATION1POSITION;
+        REAL        REGISTRATION2POSITION;
+        DINT        REGISTRATION1TIME;
+        DINT        REGISTRATION2TIME;
+        DINT        INTERPOLATIONTIME;
+        REAL        INTERPOLATEDACTUALPOSITION;
+        REAL        MASTEROFFSET;
+        REAL        STROBEMASTEROFFSET;
+        REAL        STARTMASTEROFFSET;
+        REAL        COMMANDPOSITION;
+        REAL        STROBECOMMANDPOSITION;
+        REAL        STARTCOMMANDPOSITION;
+        REAL        COMMANDVELOCITY;
+        REAL        COMMANDACCELERATION;
+        REAL        INTERPOLATEDCOMMANDPOSITION;
+END_DATATYPE
+
+DATATYPE CAM
+        REAL        MASTER;
+        REAL        SLAVE;
+        DINT        SEGMENTTYPE;
+END_DATATYPE
+
+DATATYPE CAM_PROFILE
+        DINT        STATUS;
+END_DATATYPE
+
+DATATYPE CONTROL
+        DINT        LEN;
+        DINT        POS;
+        BOOL        EN;
+        BOOL        EU;
+        BOOL        DN;
+        BOOL        EM;
+        BOOL        ER;
+        BOOL        UL;
+        BOOL        IN;
+        BOOL        FD;
+END_DATATYPE
+
+DATATYPE COORDINATE_SYSTEM
+        DINT        COORDINATESYSTEMSTATUS;
+        BOOL        SHUTDOWNSTATUS;
+        BOOL        READYSTATUS;
+        BOOL        MOTIONSTATUS;
+        DINT        COORDINATEMOTIONSTATUS;
+        BOOL        ACCELSTATUS;
+        BOOL        DECELSTATUS;
+        BOOL        ACTUALPOSTOLERANCESTATUS;
+        BOOL        COMMANDPOSTOLERANCESTATUS;
+        BOOL        STOPPINGSTATUS;
+        BOOL        MOVESTATUS;
+        BOOL        MOVETRANSITIONSTATUS;
+        BOOL        MOVEPENDINGSTATUS;
+        BOOL        MOVEPENDINGQUEUEFULLSTATUS;
+        DINT        AXISFAULT;
+        BOOL        PHYSICALAXISFAULT;
+        BOOL        MODULEFAULT;
+        BOOL        CONFIGFAULT;
+        DINT        PHYSICALAXESFAULTED;
+        DINT        MODULESFAULTED;
+        DINT        AXESCONFIGURATIONFAULTED;
+        DINT        AXESSHUTDOWNSTATUS;
+        DINT        AXESSERVOONSTATUS;
+        REAL        ACTUALPOSITION[8];
+END_DATATYPE
+
+DATATYPE COUNTER
+        DINT        PRE;
+        DINT        ACC;
+        BOOL        CU;
+        BOOL        CD;
+        BOOL        DN;
+        BOOL        OV;
+        BOOL        UN;
+END_DATATYPE
+
+DATATYPE DEADTIME
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        INFAULT;
+        REAL        DEADTIME;
+        REAL        GAIN;
+        REAL        BIAS;
+        DINT        TIMINGMODE;
+        REAL        OVERSAMPLEDT;
+        DINT        RTSTIME;
+        DINT        RTSTIMESTAMP;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        REAL        DELTAT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        INFAULTED;
+        BOOL        DEADTIMEINV;
+        BOOL        TIMINGMODEINV;
+        BOOL        RTSMISSED;
+        BOOL        RTSTIMEINV;
+        BOOL        RTSTIMESTAMPINV;
+        BOOL        DELTATINV;
+END_DATATYPE
+
+DATATYPE DERIVATIVE
+        BOOL        ENABLEIN;
+        REAL        IN;
+        REAL        GAIN;
+        BOOL        BYPASS;
+        DINT        TIMINGMODE;
+        REAL        OVERSAMPLEDT;
+        DINT        RTSTIME;
+        DINT        RTSTIMESTAMP;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        REAL        DELTAT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        TIMINGMODEINV;
+        BOOL        RTSMISSED;
+        BOOL        RTSTIMEINV;
+        BOOL        RTSTIMESTAMPINV;
+        BOOL        DELTATINV;
+END_DATATYPE
+
+DATATYPE DISCRETE_2STATE
+        BOOL        ENABLEIN;
+        BOOL        PROGCOMMAND;
+        BOOL        OPER0REQ;
+        BOOL        OPER1REQ;
+        BOOL        STATE0PERM;
+        BOOL        STATE1PERM;
+        BOOL        FB0;
+        BOOL        FB1;
+        BOOL        HANDFB;
+        REAL        FAULTTIME;
+        BOOL        FAULTALARMLATCH;
+        BOOL        FAULTALMUNLATCH;
+        BOOL        OVERRIDEONINIT;
+        BOOL        OVERRIDEONFAULT;
+        BOOL        OUTREVERSE;
+        BOOL        OVERRIDESTATE;
+        BOOL        FB0STATE0;
+        BOOL        FB0STATE1;
+        BOOL        FB1STATE0;
+        BOOL        FB1STATE1;
+        BOOL        PROGPROGREQ;
+        BOOL        PROGOPERREQ;
+        BOOL        PROGOVERRIDEREQ;
+        BOOL        PROGHANDREQ;
+        BOOL        OPERPROGREQ;
+        BOOL        OPEROPERREQ;
+        BOOL        PROGVALUERESET;
+        BOOL        ENABLEOUT;
+        BOOL        OUT;
+        BOOL        DEVICE0STATE;
+        BOOL        DEVICE1STATE;
+        BOOL        COMMANDSTATUS;
+        BOOL        FAULTALARM;
+        BOOL        MODEALARM;
+        BOOL        PROGOPER;
+        BOOL        OVERRIDE;
+        BOOL        HAND;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        FAULTTIMEINV;
+        BOOL        OPERREQINV;
+END_DATATYPE
+
+DATATYPE DISCRETE_3STATE
+        BOOL        ENABLEIN;
+        BOOL        PROG0COMMAND;
+        BOOL        PROG1COMMAND;
+        BOOL        PROG2COMMAND;
+        BOOL        OPER0REQ;
+        BOOL        OPER1REQ;
+        BOOL        OPER2REQ;
+        BOOL        STATE0PERM;
+        BOOL        STATE1PERM;
+        BOOL        STATE2PERM;
+        BOOL        FB0;
+        BOOL        FB1;
+        BOOL        FB2;
+        BOOL        FB3;
+        BOOL        HANDFB0;
+        BOOL        HANDFB1;
+        BOOL        HANDFB2;
+        REAL        FAULTTIME;
+        BOOL        FAULTALARMLATCH;
+        BOOL        FAULTALMUNLATCH;
+        BOOL        OVERRIDEONINIT;
+        BOOL        OVERRIDEONFAULT;
+        BOOL        OUT0STATE0;
+        BOOL        OUT0STATE1;
+        BOOL        OUT0STATE2;
+        BOOL        OUT1STATE0;
+        BOOL        OUT1STATE1;
+        BOOL        OUT1STATE2;
+        BOOL        OUT2STATE0;
+        BOOL        OUT2STATE1;
+        BOOL        OUT2STATE2;
+        DINT        OVERRIDESTATE;
+        BOOL        FB0STATE0;
+        BOOL        FB0STATE1;
+        BOOL        FB0STATE2;
+        BOOL        FB1STATE0;
+        BOOL        FB1STATE1;
+        BOOL        FB1STATE2;
+        BOOL        FB2STATE0;
+        BOOL        FB2STATE1;
+        BOOL        FB2STATE2;
+        BOOL        FB3STATE0;
+        BOOL        FB3STATE1;
+        BOOL        FB3STATE2;
+        BOOL        PROGPROGREQ;
+        BOOL        PROGOPERREQ;
+        BOOL        PROGOVERRIDEREQ;
+        BOOL        PROGHANDREQ;
+        BOOL        OPERPROGREQ;
+        BOOL        OPEROPERREQ;
+        BOOL        PROGVALUERESET;
+        BOOL        ENABLEOUT;
+        BOOL        OUT0;
+        BOOL        OUT1;
+        BOOL        OUT2;
+        BOOL        DEVICE0STATE;
+        BOOL        DEVICE1STATE;
+        BOOL        DEVICE2STATE;
+        BOOL        COMMAND0STATUS;
+        BOOL        COMMAND1STATUS;
+        BOOL        COMMAND2STATUS;
+        BOOL        FAULTALARM;
+        BOOL        MODEALARM;
+        BOOL        PROGOPER;
+        BOOL        OVERRIDE;
+        BOOL        HAND;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        FAULTTIMEINV;
+        BOOL        OVERRIDESTATEINV;
+        BOOL        PROGCOMMANDINV;
+        BOOL        OPERREQINV;
+        BOOL        HANDCOMMANDINV;
+END_DATATYPE
+
+DATATYPE DOMINANT_RESET
+        BOOL        ENABLEIN;
+        BOOL        SET;
+        BOOL        RESET;
+        BOOL        ENABLEOUT;
+        BOOL        OUT;
+        BOOL        OUTNOT;
+END_DATATYPE
+
+DATATYPE DOMINANT_SET
+        BOOL        ENABLEIN;
+        BOOL        SET;
+        BOOL        RESET;
+        BOOL        ENABLEOUT;
+        BOOL        OUT;
+        BOOL        OUTNOT;
+END_DATATYPE
+
+DATATYPE EXT_ROUTINE_CONTROL
+        SINT        ERRORCODE;
+        SINT        NUMPARAMS;
+        EXT_ROUTINE_PARAMETERS        PARAMETERDEFS[10];
+        EXT_ROUTINE_PARAMETERS        RETURNPARAMDEF;
+        BOOL        EN;
+        BOOL        RETURNSVALUE;
+        BOOL        DN;
+        BOOL        ER;
+        BOOL        FIRSTSCAN;
+        BOOL        ENABLEOUT;
+        BOOL        ENABLEIN;
+        BOOL        USER1;
+        BOOL        USER0;
+        BOOL        SCANTYPE1;
+        BOOL        SCANTYPE0;
+END_DATATYPE
+
+DATATYPE EXT_ROUTINE_PARAMETERS
+        DINT        ELEMENTSIZE;
+        DINT        ELEMENTCOUNT;
+        DINT        PARAMTYPE;
+END_DATATYPE
+
+DATATYPE FBD_BIT_FIELD_DISTRIBUTE
+        BOOL        ENABLEIN;
+        DINT        SOURCE;
+        DINT        SOURCEBIT;
+        DINT        LENGTH;
+        DINT        DESTBIT;
+        DINT        TARGET;
+        BOOL        ENABLEOUT;
+        DINT        DEST;
+END_DATATYPE
+
+DATATYPE FBD_BOOLEAN_AND
+        BOOL        ENABLEIN;
+        BOOL        IN1;
+        BOOL        IN2;
+        BOOL        IN3;
+        BOOL        IN4;
+        BOOL        IN5;
+        BOOL        IN6;
+        BOOL        IN7;
+        BOOL        IN8;
+        BOOL        ENABLEOUT;
+        BOOL        OUT;
+END_DATATYPE
+
+DATATYPE FBD_BOOLEAN_NOT
+        BOOL        ENABLEIN;
+        BOOL        IN;
+        BOOL        ENABLEOUT;
+        BOOL        OUT;
+END_DATATYPE
+
+DATATYPE FBD_BOOLEAN_OR
+        BOOL        ENABLEIN;
+        BOOL        IN1;
+        BOOL        IN2;
+        BOOL        IN3;
+        BOOL        IN4;
+        BOOL        IN5;
+        BOOL        IN6;
+        BOOL        IN7;
+        BOOL        IN8;
+        BOOL        ENABLEOUT;
+        BOOL        OUT;
+END_DATATYPE
+
+DATATYPE FBD_BOOLEAN_XOR
+        BOOL        ENABLEIN;
+        BOOL        IN1;
+        BOOL        IN2;
+        BOOL        ENABLEOUT;
+        BOOL        OUT;
+END_DATATYPE
+
+DATATYPE FBD_COMPARE
+        BOOL        ENABLEIN;
+        REAL        SOURCEA;
+        REAL        SOURCEB;
+        BOOL        ENABLEOUT;
+        BOOL        DEST;
+END_DATATYPE
+
+DATATYPE FBD_CONVERT
+        BOOL        ENABLEIN;
+        DINT        SOURCE;
+        BOOL        ENABLEOUT;
+        DINT        DEST;
+END_DATATYPE
+
+DATATYPE FBD_COUNTER
+        BOOL        ENABLEIN;
+        BOOL        CUENABLE;
+        BOOL        CDENABLE;
+        DINT        PRE;
+        BOOL        RESET;
+        BOOL        ENABLEOUT;
+        DINT        ACC;
+        BOOL        CU;
+        BOOL        CD;
+        BOOL        DN;
+        BOOL        OV;
+        BOOL        UN;
+END_DATATYPE
+
+DATATYPE FBD_LIMIT
+        BOOL        ENABLEIN;
+        REAL        LOWLIMIT;
+        REAL        TEST;
+        REAL        HIGHLIMIT;
+        BOOL        ENABLEOUT;
+        BOOL        DEST;
+END_DATATYPE
+
+DATATYPE FBD_LOGICAL
+        BOOL        ENABLEIN;
+        DINT        SOURCEA;
+        DINT        SOURCEB;
+        BOOL        ENABLEOUT;
+        DINT        DEST;
+END_DATATYPE
+
+DATATYPE FBD_MASKED_MOVE
+        BOOL        ENABLEIN;
+        DINT        SOURCE;
+        DINT        MASK;
+        DINT        TARGET;
+        BOOL        ENABLEOUT;
+        DINT        DEST;
+END_DATATYPE
+
+DATATYPE FBD_MASK_EQUAL
+        BOOL        ENABLEIN;
+        DINT        SOURCE;
+        DINT        MASK;
+        DINT        COMPARE;
+        BOOL        ENABLEOUT;
+        BOOL        DEST;
+END_DATATYPE
+
+DATATYPE FBD_MATH
+        BOOL        ENABLEIN;
+        REAL        SOURCEA;
+        REAL        SOURCEB;
+        BOOL        ENABLEOUT;
+        REAL        DEST;
+END_DATATYPE
+
+DATATYPE FBD_MATH_ADVANCED
+        BOOL        ENABLEIN;
+        REAL        SOURCE;
+        BOOL        ENABLEOUT;
+        REAL        DEST;
+END_DATATYPE
+
+DATATYPE FBD_ONESHOT
+        BOOL        ENABLEIN;
+        BOOL        INPUTBIT;
+        BOOL        ENABLEOUT;
+        BOOL        OUTPUTBIT;
+END_DATATYPE
+
+DATATYPE FBD_TIMER
+        BOOL        ENABLEIN;
+        BOOL        TIMERENABLE;
+        DINT        PRE;
+        BOOL        RESET;
+        BOOL        ENABLEOUT;
+        DINT        ACC;
+        BOOL        EN;
+        BOOL        TT;
+        BOOL        DN;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        PRESETINV;
+END_DATATYPE
+
+DATATYPE FBD_TRUNCATE
+        BOOL        ENABLEIN;
+        REAL        SOURCE;
+        BOOL        ENABLEOUT;
+        DINT        DEST;
+END_DATATYPE
+
+DATATYPE FILTER_HIGH_PASS
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        INITIALIZE;
+        REAL        WLEAD;
+        DINT        ORDER;
+        DINT        TIMINGMODE;
+        REAL        OVERSAMPLEDT;
+        DINT        RTSTIME;
+        DINT        RTSTIMESTAMP;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        REAL        DELTAT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        WLEADINV;
+        BOOL        ORDERINV;
+        BOOL        TIMINGMODEINV;
+        BOOL        RTSMISSED;
+        BOOL        RTSTIMEINV;
+        BOOL        RTSTIMESTAMPINV;
+        BOOL        DELTATINV;
+END_DATATYPE
+
+DATATYPE FILTER_LOW_PASS
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        INITIALIZE;
+        REAL        WLAG;
+        DINT        ORDER;
+        DINT        TIMINGMODE;
+        REAL        OVERSAMPLEDT;
+        DINT        RTSTIME;
+        DINT        RTSTIMESTAMP;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        REAL        DELTAT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        WLAGINV;
+        BOOL        ORDERINV;
+        BOOL        TIMINGMODEINV;
+        BOOL        RTSMISSED;
+        BOOL        RTSTIMEINV;
+        BOOL        RTSTIMESTAMPINV;
+        BOOL        DELTATINV;
+END_DATATYPE
+
+DATATYPE FILTER_NOTCH
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        INITIALIZE;
+        REAL        WNOTCH;
+        REAL        QFACTOR;
+        DINT        ORDER;
+        DINT        TIMINGMODE;
+        REAL        OVERSAMPLEDT;
+        DINT        RTSTIME;
+        DINT        RTSTIMESTAMP;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        REAL        DELTAT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        WNOTCHINV;
+        BOOL        QFACTORINV;
+        BOOL        ORDERINV;
+        BOOL        TIMINGMODEINV;
+        BOOL        RTSMISSED;
+        BOOL        RTSTIMEINV;
+        BOOL        RTSTIMESTAMPINV;
+        BOOL        DELTATINV;
+END_DATATYPE
+
+DATATYPE FLIP_FLOP_D
+        BOOL        ENABLEIN;
+        BOOL        D;
+        BOOL        CLEAR;
+        BOOL        CLOCK;
+        BOOL        ENABLEOUT;
+        BOOL        Q;
+        BOOL        QNOT;
+END_DATATYPE
+
+DATATYPE FLIP_FLOP_JK
+        BOOL        ENABLEIN;
+        BOOL        CLEAR;
+        BOOL        CLOCK;
+        BOOL        ENABLEOUT;
+        BOOL        Q;
+        BOOL        QNOT;
+END_DATATYPE
+
+DATATYPE FUNCTION_GENERATOR
+        BOOL        ENABLEIN;
+        REAL        IN;
+        DINT        XY1SIZE;
+        DINT        XY2SIZE;
+        BOOL        SELECT;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        XY1SIZEINV;
+        BOOL        XY2SIZEINV;
+        BOOL        XISOUTOFORDER;
+END_DATATYPE
+
+DATATYPE HL_LIMIT
+        BOOL        ENABLEIN;
+        REAL        IN;
+        REAL        HIGHLIMIT;
+        REAL        LOWLIMIT;
+        DINT        SELECTLIMIT;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        BOOL        HIGHALARM;
+        BOOL        LOWALARM;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        LIMITSINV;
+        BOOL        SELECTLIMITINV;
+END_DATATYPE
+
+DATATYPE INTEGRATOR
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        INITIALIZE;
+        REAL        INITIALVALUE;
+        REAL        IGAIN;
+        REAL        HIGHLIMIT;
+        REAL        LOWLIMIT;
+        BOOL        HOLDHIGH;
+        BOOL        HOLDLOW;
+        DINT        TIMINGMODE;
+        REAL        OVERSAMPLEDT;
+        DINT        RTSTIME;
+        DINT        RTSTIMESTAMP;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        BOOL        HIGHALARM;
+        BOOL        LOWALARM;
+        REAL        DELTAT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        IGAININV;
+        BOOL        HIGHLOWLIMSINV;
+        BOOL        TIMINGMODEINV;
+        BOOL        RTSMISSED;
+        BOOL        RTSTIMEINV;
+        BOOL        RTSTIMESTAMPINV;
+        BOOL        DELTATINV;
+END_DATATYPE
+
+DATATYPE LEAD_LAG
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        INITIALIZE;
+        REAL        LEAD;
+        REAL        LAG;
+        REAL        GAIN;
+        REAL        BIAS;
+        DINT        TIMINGMODE;
+        REAL        OVERSAMPLEDT;
+        DINT        RTSTIME;
+        DINT        RTSTIMESTAMP;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        REAL        DELTAT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        LEADINV;
+        BOOL        LAGINV;
+        BOOL        TIMINGMODEINV;
+        BOOL        RTSMISSED;
+        BOOL        RTSTIMEINV;
+        BOOL        RTSTIMESTAMPINV;
+        BOOL        DELTATINV;
+END_DATATYPE
+
+DATATYPE LEAD_LAG_SEC_ORDER
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        INITIALIZE;
+        REAL        WLEAD;
+        REAL        WLAG;
+        REAL        ZETALEAD;
+        REAL        ZETALAG;
+        DINT        ORDER;
+        DINT        TIMINGMODE;
+        REAL        OVERSAMPLEDT;
+        DINT        RTSTIME;
+        DINT        RTSTIMESTAMP;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        REAL        DELTAT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        WLEADINV;
+        BOOL        WLAGINV;
+        BOOL        ZETALEADINV;
+        BOOL        ZETALAGINV;
+        BOOL        ORDERINV;
+        BOOL        WLAGRATIOINV;
+        BOOL        TIMINGMODEINV;
+        BOOL        RTSMISSED;
+        BOOL        RTSTIMEINV;
+        BOOL        RTSTIMESTAMPINV;
+        BOOL        DELTATINV;
+END_DATATYPE
+
+DATATYPE MAXIMUM_CAPTURE
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        RESET;
+        REAL        RESETVALUE;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+END_DATATYPE
+
+DATATYPE MESSAGE
+        INT        FLAGS;
+        BOOL        EW;
+        BOOL        ER;
+        BOOL        DN;
+        BOOL        ST;
+        BOOL        EN;
+        BOOL        TO;
+        BOOL        EN_CC;
+        INT        ERR;
+        DINT        EXERR;
+        SINT        ERR_SRC;
+        INT        DN_LEN;
+        INT        REQ_LEN;
+        INT        DESTINATIONLINK;
+        INT        DESTINATIONNODE;
+        INT        SOURCELINK;
+        INT        CLASS;
+        INT        ATTRIBUTE;
+        DINT        INSTANCE;
+        DINT        LOCALINDEX;
+        SINT        CHANNEL;
+        SINT        RACK;
+        SINT        GROUP;
+        SINT        SLOT;
+        STRING        PATH;
+        DINT        REMOTEINDEX;
+        STRING        REMOTEELEMENT;
+        DINT        UNCONNECTEDTIMEOUT;
+        DINT        CONNECTIONRATE;
+        SINT        TIMEOUTMULTIPLIER;
+END_DATATYPE
+
+DATATYPE MINIMUM_CAPTURE
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        RESET;
+        REAL        RESETVALUE;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+END_DATATYPE
+
+DATATYPE MOTION_GROUP
+        DINT        GROUPSTATUS;
+        BOOL        INHIBSTATUS;
+        BOOL        GROUPSYNCED;
+        DINT        GROUPFAULT;
+        BOOL        GROUPOVERLAPFAULT;
+        BOOL        CSTLOSSFAULT;
+        BOOL        GROUPTASKLOADINGFAULT;
+        DINT        AXISFAULT;
+        BOOL        PHYSICALAXISFAULT;
+        BOOL        MODULEFAULT;
+        BOOL        CONFIGFAULT;
+END_DATATYPE
+
+DATATYPE MOTION_INSTRUCTION
+        DINT        FLAGS;
+        BOOL        EN;
+        BOOL        DN;
+        BOOL        ER;
+        BOOL        PC;
+        BOOL        IP;
+        BOOL        AC;
+        BOOL        ACCEL;
+        BOOL        DECEL;
+        INT        ERR;
+        SINT        STATUS;
+        SINT        STATE;
+        DINT        SEGMENT;
+        SINT        EXERR;
+END_DATATYPE
+
+DATATYPE MOVING_AVERAGE
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        INFAULT;
+        BOOL        INITIALIZE;
+        BOOL        SAMPLEENABLE;
+        DINT        NUMBEROFSAMPLES;
+        BOOL        USEWEIGHTS;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        INFAULTED;
+        BOOL        NUMBEROFSAMPINV;
+END_DATATYPE
+
+DATATYPE MOVING_STD_DEV
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        INFAULT;
+        BOOL        INITIALIZE;
+        BOOL        SAMPLEENABLE;
+        DINT        NUMBEROFSAMPLES;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        REAL        AVERAGE;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        INFAULTED;
+        BOOL        NUMBEROFSAMPINV;
+END_DATATYPE
+
+DATATYPE MULTIPLEXER
+        BOOL        ENABLEIN;
+        REAL        IN1;
+        REAL        IN2;
+        REAL        IN3;
+        REAL        IN4;
+        REAL        IN5;
+        REAL        IN6;
+        REAL        IN7;
+        REAL        IN8;
+        DINT        SELECTOR;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        SELECTORINV;
+END_DATATYPE
+
+DATATYPE OUTPUT_CAM
+        DINT        OUTPUTBIT;
+        DINT        LATCHTYPE;
+        DINT        UNLATCHTYPE;
+        REAL        LEFT;
+        REAL        RIGHT;
+        REAL        DURATION;
+        DINT        ENABLETYPE;
+        DINT        ENABLEBIT;
+END_DATATYPE
+
+DATATYPE OUTPUT_COMPENSATION
+        REAL        OFFSET;
+        REAL        LATCHDELAY;
+        REAL        UNLATCHDELAY;
+        DINT        MODE;
+        REAL        CYCLETIME;
+        REAL        DUTYCYCLE;
+END_DATATYPE
+
+DATATYPE PID
+        DINT        CTL;
+        BOOL        EN;
+        BOOL        CT;
+        BOOL        CL;
+        BOOL        PVT;
+        BOOL        DOE;
+        BOOL        SWM;
+        BOOL        CA;
+        BOOL        MO;
+        BOOL        PE;
+        BOOL        NDF;
+        BOOL        NOBC;
+        BOOL        NOZC;
+        BOOL        INI;
+        BOOL        SPOR;
+        BOOL        OLL;
+        BOOL        OLH;
+        BOOL        EWD;
+        BOOL        DVNA;
+        BOOL        DVPA;
+        BOOL        PVLA;
+        BOOL        PVHA;
+        REAL        SP;
+        REAL        KP;
+        REAL        KI;
+        REAL        KD;
+        REAL        BIAS;
+        REAL        MAXS;
+        REAL        MINS;
+        REAL        DB;
+        REAL        SO;
+        REAL        MAXO;
+        REAL        MINO;
+        REAL        UPD;
+        REAL        PV;
+        REAL        ERR;
+        REAL        OUT;
+        REAL        PVH;
+        REAL        PVL;
+        REAL        DVP;
+        REAL        DVN;
+        REAL        PVDB;
+        REAL        DVDB;
+        REAL        MAXI;
+        REAL        MINI;
+        REAL        TIE;
+        REAL        MAXCV;
+        REAL        MINCV;
+        REAL        MINTIE;
+        REAL        MAXTIE;
+        REAL        DATA[17];
+END_DATATYPE
+
+DATATYPE PIDE_AUTOTUNE
+        DINT        PROCESSTYPE;
+        DINT        RESPONSESPEED;
+        REAL        TESTLENGTH;
+        REAL        PVTUNELIMIT;
+        REAL        STEPSIZE;
+        BOOL        TUNEDGOOD;
+        BOOL        TUNEDUNCERTAIN;
+        BOOL        ATUNEACQUIRED;
+        DINT        USEDPROCESSTYPE;
+        REAL        GAIN;
+        REAL        TIMECONSTANT;
+        REAL        DEADTIME;
+        REAL        PGAINTUNEDFAST;
+        REAL        IGAINTUNEDFAST;
+        REAL        DGAINTUNEDFAST;
+        REAL        PGAINTUNEDMED;
+        REAL        IGAINTUNEDMED;
+        REAL        DGAINTUNEDMED;
+        REAL        PGAINTUNEDSLOW;
+        REAL        IGAINTUNEDSLOW;
+        REAL        DGAINTUNEDSLOW;
+        REAL        STEPSIZEUSED;
+        DINT        ATUNESTATUS;
+        BOOL        ATUNEFAULT;
+        BOOL        PVOUTOFLIMIT;
+        BOOL        MODEINV;
+        BOOL        CVWINDUPFAULT;
+        BOOL        STEPSIZEZERO;
+        BOOL        CVLIMITSFAULT;
+        BOOL        CVINITFAULT;
+        BOOL        EUSPANCHANGED;
+        BOOL        CVCHANGED;
+        BOOL        ATUNETIMEDOUT;
+        BOOL        PVNOTSETTLED;
+        BOOL        PVCHANGETOOSMALL;
+        BOOL        STEPSIZETOOSMALL;
+        BOOL        GAINTOOLARGE;
+        BOOL        GAINTOOSMALL;
+        BOOL        LONGDEADTIME;
+END_DATATYPE
+
+DATATYPE PID_ENHANCED
+        BOOL        ENABLEIN;
+        REAL        PV;
+        BOOL        PVFAULT;
+        REAL        PVEUMAX;
+        REAL        PVEUMIN;
+        REAL        SPPROG;
+        REAL        SPOPER;
+        REAL        SPCASCADE;
+        REAL        SPHLIMIT;
+        REAL        SPLLIMIT;
+        BOOL        USERATIO;
+        REAL        RATIOPROG;
+        REAL        RATIOOPER;
+        REAL        RATIOHLIMIT;
+        REAL        RATIOLLIMIT;
+        BOOL        CVFAULT;
+        BOOL        CVINITREQ;
+        REAL        CVINITVALUE;
+        REAL        CVPROG;
+        REAL        CVOPER;
+        REAL        CVOVERRIDE;
+        REAL        CVPREVIOUS;
+        BOOL        CVSETPREVIOUS;
+        BOOL        CVMANLIMITING;
+        REAL        CVEUMAX;
+        REAL        CVEUMIN;
+        REAL        CVHLIMIT;
+        REAL        CVLLIMIT;
+        REAL        CVROCLIMIT;
+        REAL        FF;
+        REAL        FFPREVIOUS;
+        BOOL        FFSETPREVIOUS;
+        REAL        HANDFB;
+        BOOL        HANDFBFAULT;
+        BOOL        WINDUPHIN;
+        BOOL        WINDUPLIN;
+        BOOL        CONTROLACTION;
+        BOOL        DEPENDINDEPEND;
+        REAL        PGAIN;
+        REAL        IGAIN;
+        REAL        DGAIN;
+        BOOL        PVEPROPORTIONAL;
+        BOOL        PVEDERIVATIVE;
+        BOOL        DSMOOTHING;
+        BOOL        PVTRACKING;
+        REAL        ZCDEADBAND;
+        BOOL        ZCOFF;
+        REAL        PVHHLIMIT;
+        REAL        PVHLIMIT;
+        REAL        PVLLIMIT;
+        REAL        PVLLLIMIT;
+        REAL        PVDEADBAND;
+        REAL        PVROCPOSLIMIT;
+        REAL        PVROCNEGLIMIT;
+        REAL        PVROCPERIOD;
+        REAL        DEVHHLIMIT;
+        REAL        DEVHLIMIT;
+        REAL        DEVLLIMIT;
+        REAL        DEVLLLIMIT;
+        REAL        DEVDEADBAND;
+        BOOL        ALLOWCASRAT;
+        BOOL        MANUALAFTERINIT;
+        BOOL        PROGPROGREQ;
+        BOOL        PROGOPERREQ;
+        BOOL        PROGCASRATREQ;
+        BOOL        PROGAUTOREQ;
+        BOOL        PROGMANUALREQ;
+        BOOL        PROGOVERRIDEREQ;
+        BOOL        PROGHANDREQ;
+        BOOL        OPERPROGREQ;
+        BOOL        OPEROPERREQ;
+        BOOL        OPERCASRATREQ;
+        BOOL        OPERAUTOREQ;
+        BOOL        OPERMANUALREQ;
+        BOOL        PROGVALUERESET;
+        DINT        TIMINGMODE;
+        REAL        OVERSAMPLEDT;
+        DINT        RTSTIME;
+        DINT        RTSTIMESTAMP;
+        BOOL        ATUNEACQUIRE;
+        BOOL        ATUNESTART;
+        BOOL        ATUNEUSEGAINS;
+        BOOL        ATUNEABORT;
+        BOOL        ATUNEUNACQUIRE;
+        BOOL        ENABLEOUT;
+        REAL        CVEU;
+        REAL        CV;
+        BOOL        CVINITIALIZING;
+        BOOL        CVHALARM;
+        BOOL        CVLALARM;
+        BOOL        CVROCALARM;
+        REAL        SP;
+        REAL        SPPERCENT;
+        BOOL        SPHALARM;
+        BOOL        SPLALARM;
+        REAL        PVPERCENT;
+        REAL        E;
+        REAL        EPERCENT;
+        BOOL        INITPRIMARY;
+        BOOL        WINDUPHOUT;
+        BOOL        WINDUPLOUT;
+        REAL        RATIO;
+        BOOL        RATIOHALARM;
+        BOOL        RATIOLALARM;
+        BOOL        ZCDEADBANDON;
+        BOOL        PVHHALARM;
+        BOOL        PVHALARM;
+        BOOL        PVLALARM;
+        BOOL        PVLLALARM;
+        BOOL        PVROCPOSALARM;
+        BOOL        PVROCNEGALARM;
+        BOOL        DEVHHALARM;
+        BOOL        DEVHALARM;
+        BOOL        DEVLALARM;
+        BOOL        DEVLLALARM;
+        BOOL        PROGOPER;
+        BOOL        CASRAT;
+        BOOL        AUTO;
+        BOOL        MANUAL;
+        BOOL        OVERRIDE;
+        BOOL        HAND;
+        REAL        DELTAT;
+        BOOL        ATUNEREADY;
+        BOOL        ATUNEON;
+        BOOL        ATUNEDONE;
+        BOOL        ATUNEABORTED;
+        BOOL        ATUNEBUSY;
+        DINT        STATUS1;
+        DINT        STATUS2;
+        BOOL        INSTRUCTFAULT;
+        BOOL        PVFAULTED;
+        BOOL        CVFAULTED;
+        BOOL        HANDFBFAULTED;
+        BOOL        PVSPANINV;
+        BOOL        SPPROGINV;
+        BOOL        SPOPERINV;
+        BOOL        SPCASCADEINV;
+        BOOL        SPLIMITSINV;
+        BOOL        RATIOPROGINV;
+        BOOL        RATIOOPERINV;
+        BOOL        RATIOLIMITSINV;
+        BOOL        CVPROGINV;
+        BOOL        CVOPERINV;
+        BOOL        CVOVERRIDEINV;
+        BOOL        CVPREVIOUSINV;
+        BOOL        CVEUSPANINV;
+        BOOL        CVLIMITSINV;
+        BOOL        CVROCLIMITINV;
+        BOOL        FFINV;
+        BOOL        FFPREVIOUSINV;
+        BOOL        HANDFBINV;
+        BOOL        PGAININV;
+        BOOL        IGAININV;
+        BOOL        DGAININV;
+        BOOL        ZCDEADBANDINV;
+        BOOL        PVDEADBANDINV;
+        BOOL        PVROCLIMITSINV;
+        BOOL        DEVHLLIMITSINV;
+        BOOL        DEVDEADBANDINV;
+        BOOL        ATUNEDATAINV;
+        BOOL        TIMINGMODEINV;
+        BOOL        RTSMISSED;
+        BOOL        RTSTIMEINV;
+        BOOL        RTSTIMESTAMPINV;
+        BOOL        DELTATINV;
+END_DATATYPE
+
+DATATYPE POSITION_PROP
+        BOOL        ENABLEIN;
+        REAL        SP;
+        REAL        POSITION;
+        BOOL        OPENEDFB;
+        BOOL        CLOSEDFB;
+        REAL        POSITIONEUMAX;
+        REAL        POSITIONEUMIN;
+        REAL        CYCLETIME;
+        REAL        OPENRATE;
+        REAL        CLOSERATE;
+        REAL        MAXONTIME;
+        REAL        MINONTIME;
+        REAL        DEADTIME;
+        BOOL        ENABLEOUT;
+        BOOL        OPENOUT;
+        BOOL        CLOSEOUT;
+        REAL        POSITIONPERCENT;
+        REAL        SPPERCENT;
+        REAL        OPENTIME;
+        REAL        CLOSETIME;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        CYCLETIMEINV;
+        BOOL        OPENRATEINV;
+        BOOL        CLOSERATEINV;
+        BOOL        MAXONTIMEINV;
+        BOOL        MINONTIMEINV;
+        BOOL        DEADTIMEINV;
+        BOOL        POSITIONPCTINV;
+        BOOL        SPPERCENTINV;
+        BOOL        POSITIONSPANINV;
+END_DATATYPE
+
+DATATYPE PROP_INT
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        INITIALIZE;
+        REAL        INITIALVALUE;
+        REAL        KP;
+        REAL        WLD;
+        REAL        HIGHLIMIT;
+        REAL        LOWLIMIT;
+        BOOL        HOLDHIGH;
+        BOOL        HOLDLOW;
+        REAL        SHAPEKPPLUS;
+        REAL        SHAPEKPMINUS;
+        REAL        KPINRANGE;
+        REAL        SHAPEWLDPLUS;
+        REAL        SHAPEWLDMINUS;
+        REAL        WLDINRANGE;
+        BOOL        NONLINEARMODE;
+        BOOL        PARABOLICLINEAR;
+        DINT        TIMINGMODE;
+        REAL        OVERSAMPLEDT;
+        DINT        RTSTIME;
+        DINT        RTSTIMESTAMP;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        BOOL        HIGHALARM;
+        BOOL        LOWALARM;
+        REAL        DELTAT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        KPINV;
+        BOOL        WLDINV;
+        BOOL        HIGHLOWLIMSINV;
+        BOOL        SHAPEKPPLUSINV;
+        BOOL        SHAPEKPMINUSINV;
+        BOOL        KPINRANGEINV;
+        BOOL        SHAPEWLDPLUSINV;
+        BOOL        SHAPEWLDMINUSINV;
+        BOOL        WLDINRANGEINV;
+        BOOL        TIMINGMODEINV;
+        BOOL        RTSMISSED;
+        BOOL        RTSTIMEINV;
+        BOOL        RTSTIMESTAMPINV;
+        BOOL        DELTATINV;
+END_DATATYPE
+
+DATATYPE PULSE_MULTIPLIER
+        BOOL        ENABLEIN;
+        DINT        IN;
+        BOOL        INITIALIZE;
+        DINT        INITIALVALUE;
+        BOOL        MODE;
+        DINT        WORDSIZE;
+        DINT        MULTIPLIER;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        WORDSIZEINV;
+        BOOL        OUTOVERFLOW;
+        BOOL        LOSTPRECISION;
+        BOOL        MULTIPLIERINV;
+END_DATATYPE
+
+DATATYPE RAMP_SOAK
+        BOOL        ENABLEIN;
+        REAL        PV;
+        BOOL        PVFAULT;
+        DINT        NUMBEROFSEGS;
+        BOOL        MANHOLDAFTINIT;
+        BOOL        CYCLICSINGLE;
+        BOOL        TIMERATE;
+        BOOL        GUARRAMP;
+        REAL        RAMPDEADBAND;
+        BOOL        GUARSOAK;
+        REAL        SOAKDEADBAND;
+        DINT        CURRENTSEGPROG;
+        REAL        OUTPROG;
+        REAL        SOAKTIMEPROG;
+        DINT        CURRENTSEGOPER;
+        REAL        OUTOPER;
+        REAL        SOAKTIMEOPER;
+        BOOL        PROGPROGREQ;
+        BOOL        PROGOPERREQ;
+        BOOL        PROGAUTOREQ;
+        BOOL        PROGMANUALREQ;
+        BOOL        PROGHOLDREQ;
+        BOOL        OPERPROGREQ;
+        BOOL        OPEROPERREQ;
+        BOOL        OPERAUTOREQ;
+        BOOL        OPERMANUALREQ;
+        BOOL        INITIALIZE;
+        BOOL        PROGVALUERESET;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        DINT        CURRENTSEG;
+        REAL        SOAKTIMELEFT;
+        BOOL        GUARRAMPON;
+        BOOL        GUARSOAKON;
+        BOOL        PROGOPER;
+        BOOL        AUTO;
+        BOOL        MANUAL;
+        BOOL        HOLD;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        PVFAULTED;
+        BOOL        NUMBEROFSEGSINV;
+        BOOL        RAMPDEADBANDINV;
+        BOOL        SOAKDEADBANDINV;
+        BOOL        CURRSEGPROGINV;
+        BOOL        SOAKTIMEPROGINV;
+        BOOL        CURRSEGOPERINV;
+        BOOL        SOAKTIMEOPERINV;
+        BOOL        RAMPVALUEINV;
+        BOOL        SOAKTIMEINV;
+END_DATATYPE
+
+DATATYPE RATE_LIMITER
+        BOOL        ENABLEIN;
+        REAL        IN;
+        REAL        INCRATE;
+        REAL        DECRATE;
+        BOOL        BYPASS;
+        DINT        TIMINGMODE;
+        REAL        OVERSAMPLEDT;
+        DINT        RTSTIME;
+        DINT        RTSTIMESTAMP;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        REAL        DELTAT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        INCRATEINV;
+        BOOL        DECRATEINV;
+        BOOL        TIMINGMODEINV;
+        BOOL        RTSMISSED;
+        BOOL        RTSTIMEINV;
+        BOOL        RTSTIMESTAMPINV;
+        BOOL        DELTATINV;
+END_DATATYPE
+
+DATATYPE SCALE
+        BOOL        ENABLEIN;
+        REAL        IN;
+        REAL        INRAWMAX;
+        REAL        INRAWMIN;
+        REAL        INEUMAX;
+        REAL        INEUMIN;
+        BOOL        LIMITING;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        BOOL        MAXALARM;
+        BOOL        MINALARM;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        INRAWRANGEINV;
+END_DATATYPE
+
+DATATYPE SEC_ORDER_CONTROLLER
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        INITIALIZE;
+        REAL        INITIALVALUE;
+        REAL        GAIN;
+        REAL        WLAG;
+        REAL        WLEAD;
+        REAL        ZETALEAD;
+        REAL        HIGHLIMIT;
+        REAL        LOWLIMIT;
+        BOOL        HOLDHIGH;
+        BOOL        HOLDLOW;
+        DINT        TIMINGMODE;
+        REAL        OVERSAMPLEDT;
+        DINT        RTSTIME;
+        DINT        RTSTIMESTAMP;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        BOOL        HIGHALARM;
+        BOOL        LOWALARM;
+        REAL        DELTAT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        GAININV;
+        BOOL        WLAGINV;
+        BOOL        WLEADINV;
+        BOOL        ZETALEADINV;
+        BOOL        HIGHLOWLIMSINV;
+        BOOL        TIMINGMODEINV;
+        BOOL        RTSMISSED;
+        BOOL        RTSTIMEINV;
+        BOOL        RTSTIMESTAMPINV;
+        BOOL        DELTATINV;
+END_DATATYPE
+
+DATATYPE SELECT
+        BOOL        ENABLEIN;
+        REAL        IN1;
+        REAL        IN2;
+        BOOL        SELECTORIN;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+END_DATATYPE
+
+DATATYPE SELECTABLE_NEGATE
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        NEGATEENABLE;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+END_DATATYPE
+
+DATATYPE SELECTED_SUMMER
+        BOOL        ENABLEIN;
+        REAL        IN1;
+        REAL        GAIN1;
+        BOOL        SELECT1;
+        REAL        IN2;
+        REAL        GAIN2;
+        BOOL        SELECT2;
+        REAL        IN3;
+        REAL        GAIN3;
+        BOOL        SELECT3;
+        REAL        IN4;
+        REAL        GAIN4;
+        BOOL        SELECT4;
+        REAL        IN5;
+        REAL        GAIN5;
+        BOOL        SELECT5;
+        REAL        IN6;
+        REAL        GAIN6;
+        BOOL        SELECT6;
+        REAL        IN7;
+        REAL        GAIN7;
+        BOOL        SELECT7;
+        REAL        IN8;
+        REAL        GAIN8;
+        BOOL        SELECT8;
+        REAL        BIAS;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+END_DATATYPE
+
+DATATYPE SELECT_ENHANCED
+        BOOL        ENABLEIN;
+        REAL        IN1;
+        REAL        IN2;
+        REAL        IN3;
+        REAL        IN4;
+        REAL        IN5;
+        REAL        IN6;
+        BOOL        IN1FAULT;
+        BOOL        IN2FAULT;
+        BOOL        IN3FAULT;
+        BOOL        IN4FAULT;
+        BOOL        IN5FAULT;
+        BOOL        IN6FAULT;
+        DINT        INSUSED;
+        DINT        SELECTORMODE;
+        DINT        PROGSELECTOR;
+        DINT        OPERSELECTOR;
+        BOOL        PROGPROGREQ;
+        BOOL        PROGOPERREQ;
+        BOOL        PROGOVERRIDEREQ;
+        BOOL        OPERPROGREQ;
+        BOOL        OPEROPERREQ;
+        BOOL        PROGVALUERESET;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+        DINT        SELECTEDIN;
+        BOOL        PROGOPER;
+        BOOL        OVERRIDE;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        INSFAULTED;
+        BOOL        INSUSEDINV;
+        BOOL        SELECTORMODEINV;
+        BOOL        PROGSELECTORINV;
+        BOOL        OPERSELECTORINV;
+END_DATATYPE
+
+DATATYPE SERIAL_PORT_CONTROL
+        DINT        LEN;
+        DINT        POS;
+        DINT        ERROR;
+        BOOL        EN;
+        BOOL        EU;
+        BOOL        DN;
+        BOOL        EM;
+        BOOL        ER;
+        BOOL        UL;
+        BOOL        RN;
+        BOOL        FD;
+END_DATATYPE
+
+DATATYPE SFC_ACTION
+        DINT        STATUS;
+        BOOL        A;
+        BOOL        Q;
+        DINT        PRE;
+        DINT        T;
+        DINT        COUNT;
+END_DATATYPE
+
+DATATYPE SFC_STEP
+        DINT        STATUS;
+        BOOL        X;
+        BOOL        FS;
+        BOOL        SA;
+        BOOL        LS;
+        BOOL        DN;
+        BOOL        OV;
+        BOOL        ALARMEN;
+        BOOL        ALARMLOW;
+        BOOL        ALARMHIGH;
+        BOOL        RESET;
+        DINT        PRE;
+        DINT        T;
+        DINT        TMAX;
+        DINT        COUNT;
+        DINT        LIMITLOW;
+        DINT        LIMITHIGH;
+END_DATATYPE
+
+DATATYPE SFC_STOP
+        DINT        STATUS;
+        BOOL        X;
+        BOOL        RESET;
+        DINT        COUNT;
+END_DATATYPE
+
+DATATYPE SPLIT_RANGE
+        BOOL        ENABLEIN;
+        REAL        IN;
+        REAL        CYCLETIME;
+        REAL        MAXHEATIN;
+        REAL        MINHEATIN;
+        REAL        MAXCOOLIN;
+        REAL        MINCOOLIN;
+        REAL        MAXHEATTIME;
+        REAL        MINHEATTIME;
+        REAL        MAXCOOLTIME;
+        REAL        MINCOOLTIME;
+        BOOL        ENABLEOUT;
+        BOOL        HEATOUT;
+        BOOL        COOLOUT;
+        REAL        HEATTIMEPERCENT;
+        REAL        COOLTIMEPERCENT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        CYCLETIMEINV;
+        BOOL        MAXHEATTIMEINV;
+        BOOL        MINHEATTIMEINV;
+        BOOL        MAXCOOLTIMEINV;
+        BOOL        MINCOOLTIMEINV;
+        BOOL        HEATSPANINV;
+        BOOL        COOLSPANINV;
+END_DATATYPE
+
+DATATYPE S_CURVE
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        INITIALIZE;
+        REAL        INITIALVALUE;
+        BOOL        ABSALGRAMP;
+        REAL        ACCELRATE;
+        REAL        DECELRATE;
+        REAL        JERKRATE;
+        BOOL        HOLDMODE;
+        BOOL        HOLDENABLE;
+        DINT        TIMINGMODE;
+        REAL        OVERSAMPLEDT;
+        DINT        RTSTIME;
+        DINT        RTSTIMESTAMP;
+        BOOL        ENABLEOUT;
+        BOOL        S_MODE;
+        REAL        OUT;
+        REAL        RATE;
+        REAL        DELTAT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        ACCELRATEINV;
+        BOOL        DECELRATEINV;
+        BOOL        JERKRATEINV;
+        BOOL        TIMINGMODEINV;
+        BOOL        RTSMISSED;
+        BOOL        RTSTIMEINV;
+        BOOL        RTSTIMESTAMPINV;
+        BOOL        DELTATINV;
+END_DATATYPE
+
+DATATYPE TIMER
+        DINT        PRE;
+        DINT        ACC;
+        BOOL        EN;
+        BOOL        TT;
+        BOOL        DN;
+        BOOL        FS;
+        BOOL        LS;
+        BOOL        OV;
+        BOOL        ER;
+END_DATATYPE
+
+DATATYPE TOTALIZER
+        BOOL        ENABLEIN;
+        REAL        IN;
+        BOOL        INFAULT;
+        DINT        TIMEBASE;
+        REAL        GAIN;
+        REAL        RESETVALUE;
+        REAL        TARGET;
+        REAL        TARGETDEV1;
+        REAL        TARGETDEV2;
+        REAL        LOWINCUTOFF;
+        BOOL        PROGPROGREQ;
+        BOOL        PROGOPERREQ;
+        BOOL        PROGSTARTREQ;
+        BOOL        PROGSTOPREQ;
+        BOOL        PROGRESETREQ;
+        BOOL        OPERPROGREQ;
+        BOOL        OPEROPERREQ;
+        BOOL        OPERSTARTREQ;
+        BOOL        OPERSTOPREQ;
+        BOOL        OPERRESETREQ;
+        BOOL        PROGVALUERESET;
+        DINT        TIMINGMODE;
+        REAL        OVERSAMPLEDT;
+        DINT        RTSTIME;
+        DINT        RTSTIMESTAMP;
+        BOOL        ENABLEOUT;
+        REAL        TOTAL;
+        REAL        OLDTOTAL;
+        BOOL        PROGOPER;
+        BOOL        RUNSTOP;
+        BOOL        PROGRESETDONE;
+        BOOL        TARGETFLAG;
+        BOOL        TARGETDEV1FLAG;
+        BOOL        TARGETDEV2FLAG;
+        BOOL        LOWINCUTOFFFLAG;
+        REAL        DELTAT;
+        DINT        STATUS;
+        BOOL        INSTRUCTFAULT;
+        BOOL        INFAULTED;
+        BOOL        TIMEBASEINV;
+        BOOL        TIMINGMODEINV;
+        BOOL        RTSMISSED;
+        BOOL        RTSTIMEINV;
+        BOOL        RTSTIMESTAMPINV;
+        BOOL        DELTATINV;
+END_DATATYPE
+
+DATATYPE UP_DOWN_ACCUM
+        BOOL        ENABLEIN;
+        BOOL        INITIALIZE;
+        REAL        INITIALVALUE;
+        REAL        INPLUS;
+        REAL        INMINUS;
+        BOOL        HOLD;
+        BOOL        ENABLEOUT;
+        REAL        OUT;
+END_DATATYPE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

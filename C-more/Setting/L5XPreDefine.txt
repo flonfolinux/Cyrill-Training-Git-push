@@ -1,0 +1,24 @@
+ModuleIO_Include_Local=1
+ModuleIO_Include_Remote=1
+ModuleIO_Include_Inputs=1
+ModuleIO_Include_Outputs=1
+ModuleIO_Include_Config=1
+ModuleIO_Include_Status=1
+
+DATATYPE COUNTER
+        DINT        PRE;
+        DINT        ACC;
+        BOOL        CU;
+        BOOL        CD;
+        BOOL        DN;
+        BOOL        OV;
+        BOOL        UN;
+END_DATATYPE         
+
+DATATYPE TIMER
+        DINT        PRE;
+        DINT        ACC;
+        BOOL        EN;
+        BOOL        TT;
+        BOOL        DN;
+END_DATATYPE         
